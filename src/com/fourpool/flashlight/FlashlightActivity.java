@@ -16,6 +16,7 @@ import android.view.SurfaceView;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.Window;
+import android.view.WindowManager;
 
 // ----------------------------------------------------------------------
 
@@ -34,6 +35,7 @@ public class FlashlightActivity extends Activity {
 
 		// Hide the window title.
 		requestWindowFeature(Window.FEATURE_NO_TITLE);
+		getWindow().addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
 		// getWindow().addFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN);
 
 		// Create a RelativeLayout container that will hold a SurfaceView,
