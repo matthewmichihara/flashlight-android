@@ -1,4 +1,6 @@
-package com.fourpool.flashlight;
+
+
+/*package com.fourpool.flashlight;
 
 import java.io.IOException;
 
@@ -19,7 +21,7 @@ public class FlashlightActivity extends Activity implements Callback {
 	private static final String TAG = FlashlightActivity.class.getSimpleName();
 
 	private Camera mCamera;
-	private ToggleButton mLightSwitch;
+	private CompoundButton mLightSwitch;
 	private SurfaceView mSurfaceView;
 	private SurfaceHolder mSurfaceHolder;
 
@@ -35,11 +37,12 @@ public class FlashlightActivity extends Activity implements Callback {
 			Log.d(TAG, "mCamera is null.");
 			AlertDialog.Builder builder = new AlertDialog.Builder(this);
 			builder.setMessage(R.string.not_supported);
-			builder.setPositiveButton(R.string.exit, new DialogInterface.OnClickListener() {
-				public void onClick(DialogInterface dialog, int which) {
-					finish();
-				}
-			});
+			builder.setPositiveButton(R.string.exit,
+					new DialogInterface.OnClickListener() {
+						public void onClick(DialogInterface dialog, int which) {
+							finish();
+						}
+					});
 			builder.show();
 			return;
 		}
@@ -52,16 +55,19 @@ public class FlashlightActivity extends Activity implements Callback {
 		parameters.setFlashMode(Parameters.FLASH_MODE_TORCH);
 		mCamera.setParameters(parameters);
 
-		mLightSwitch.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+		mLightSwitch
+				.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
 
-			public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-				if (isChecked) {
-					mCamera.startPreview();
-				} else {
-					mCamera.stopPreview();
-				}
-			}
-		});
+					public void onCheckedChanged(CompoundButton buttonView,
+							boolean isChecked) {
+
+						if (isChecked) {
+							mCamera.startPreview();
+						} else {
+							mCamera.stopPreview();
+						}
+					}
+				});
 
 		mLightSwitch.setChecked(true);
 	}
@@ -75,7 +81,8 @@ public class FlashlightActivity extends Activity implements Callback {
 		}
 	}
 
-	public void surfaceChanged(SurfaceHolder holder, int format, int width, int height) {
+	public void surfaceChanged(SurfaceHolder holder, int format, int width,
+			int height) {
 	}
 
 	public void surfaceCreated(SurfaceHolder holder) {
@@ -89,3 +96,4 @@ public class FlashlightActivity extends Activity implements Callback {
 	public void surfaceDestroyed(SurfaceHolder holder) {
 	}
 }
+*/

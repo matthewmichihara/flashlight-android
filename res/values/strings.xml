@@ -3,5 +3,7 @@
 
     <string name="hello">Hello World, FlashlightActivity!</string>
     <string name="app_name">Flashlight</string>
+    <string name="not_supported">Sorry, you\'re device is not supported :(</string>
+    <string name="exit">Exit</string>
 
 </resources>
